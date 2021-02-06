@@ -1,0 +1,89 @@
+
+/* header用CSS */
+
+.header {
+  height: 70px;
+  width: 100vw;
+  background-color: #A39391;
+  border: 1px solid #716E77;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  margin: 20px;
+}
+
+.header-logo a {
+  color: #E79686;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.search-form{
+  display: flex;
+} 
+
+.search-input {
+  height: 38px;
+  width: 550px;
+  background-color: #716E77;
+  border: 1px solid #ddd;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.search-btn {
+  height: 38px;
+  width: 80px;
+  background-color: #716E77;
+  border: 1px solid #ddd;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-font {
+  color: #fff;
+  font-size: 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  margin-left: 50px;
+  display: flex;
+}
+
+.nav-list {
+  height: 38px;
+  width: 100px;
+  background-color: #716E77;
+  border: 1px solid #ddd;
+  margin-right: 15px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-font {
+  color: #fff;
+  font-size: 15px;
+}
+
+.user {
+  height: 50px;
+  width: 50px;
+  background-color: #716E77;
+  border: 1px solid #ddd;
+  margin: 15px;
+}
+
+/* header用CSS */
