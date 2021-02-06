@@ -7,9 +7,24 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   </head>
 
   <body>
+    <div class = "header">
+      <h1 class="header-logo"><a href="/">Bridge Band</a></h1>
+      <div class = "search-form"> 
+        <div class = "search-input"></div>
+        <div class = "search-btn"><p class = "btn-font">検索</p></div>
+      </div>
+      <div class = "header-right">
+        <ul class = "nav">
+          <li class = "nav-list"><p class = "nav-font">新規投稿</p></li>
+          <li class = "nav-list"><p class = "nav-font">ログアウト</p></li>
+        </ul>
+        <div class = "user"></div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

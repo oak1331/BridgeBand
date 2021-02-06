@@ -1,0 +1,24 @@
+
+/* トップページ用CSS */
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  margin-top: 3%;
+}
+
+.main-1 {
+  margin:0 3% 70px 3%;
+}
+
+.main-2 {
+  height: 180px;
+  background-color: #716E77;
+}
+
+.title {
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+/* トップページ用CSS */
