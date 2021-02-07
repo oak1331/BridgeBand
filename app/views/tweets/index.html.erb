@@ -1,47 +1,15 @@
-
-<div class = "main">
-  <div class = "main-1">
-    <div class = "main-2"></div>
-    <p class = "title">title</p>
-  </div>
-
-  <div class = "main-1">
-    <div class = "main-2"></div>
-    <p class = "title">title</p>
-  </div>
-
-  <div class = "main-1">
-    <div class = "main-2"></div>
-    <p class = "title">title</p>
-  </div>
-
-  <div class = "main-1">
-    <div class = "main-2"></div>
-    <p class = "title">title</p>
-  </div>
-
-  <div class = "main-1">
-    <div class = "main-2"></div>
-    <p class = "title">title</p>
-  </div>
-
-  <div class = "main-1">
-    <div class = "main-2"></div>
-    <p class = "title">title</p>
-  </div>
-
-  <div class = "main-1">
-    <div class = "main-2"></div>
-    <p class = "title">title</p>
-  </div>
-
-  <div class = "main-1">
-    <div class = "main-2"></div>
-    <p class = "title">title</p>
-  </div>
-
-  <div class = "main-1">
-    <div class = "main-2"></div>
-    <p class = "title">title</p>
-  </div>
+<div class = "tweet-view">
+  <% @tweets.each do |tweet| %>
+    <div class = "tweet-box">
+      <div class = "tweet-image">
+        <a href= '/tweets/new'><%= image_tag tweet.image.variant(resize: '500x180') %></a>
+      </div>
+      <div class = "tweet-name">
+        <%= tweet.nickname %>
+      </div>
+      <div class = "tweet-title">
+        <%= tweet.title %>
+      </div>
+    </div>
+  <% end %>
 </div>
