@@ -19,6 +19,7 @@
   color: #E79686;
   font-size: 28px;
   text-decoration: none;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .search-form{

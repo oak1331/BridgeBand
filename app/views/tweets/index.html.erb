@@ -2,7 +2,7 @@
   <% @tweets.each do |tweet| %>
     <div class = "tweet-box">
       <div class = "tweet-image">
-        <a href= '/tweets/new'><%= image_tag tweet.image.variant(resize: '500x180') %></a>
+        <a href= '/tweets/new'><%= image_tag tweet.image.variant(resize: '320x180') %></a>
       </div>
       <div class = "tweet-name">
         <%= tweet.nickname %>
