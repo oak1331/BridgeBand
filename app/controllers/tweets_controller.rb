@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.includes(:user)
   end
 
   def new
