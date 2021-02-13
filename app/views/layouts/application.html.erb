@@ -18,11 +18,22 @@
         <div class = "search-btn"><p class = "btn-font">検索</p></div>
       </div>
       <div class = "header-right">
-        <ul class = "nav">
-          <li class = "nav-list"><a class = "nav-font" href= '/tweets/new'>新規投稿</a></li>
-          <li class = "nav-list"><a class = "nav-font" href= '/'>ログアウト</a></li>
-        </ul>
-        <div class = "user"></div>
+        <div class = "nav">
+          <% if user_signed_in? %>
+            <%= link_to "新規投稿", new_tweet_path, class: "nav-list" %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-list" %>
+          <% else %>
+            <%= link_to "新規登録", new_user_registration_path, class: "nav-list" %>
+            <%= link_to "ログイン", new_user_session_path, class: "nav-list" %>
+          <% end %>
+        </div>
+        <div class = "user">
+          <% if user_signed_in? %>
+            <%= link_to "マイページ", "/users/#{current_user.id}" %>
+          <% else %>
+            <%= link_to "ログイン", new_user_session_path, class: "" %>
+          <% end %>
+        </div>
       </div>
     </div>
     <%= yield %>
