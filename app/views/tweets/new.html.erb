@@ -4,10 +4,6 @@
     <div class = "container-box">
       <%= form_with(model: @tweet, local: true) do |form| %>
         <div class = "container-li">
-          <h3>ユーザー名</h3>
-          <%= form.text_field :nickname, placeholder: "ニックネーム", size: "50" %>
-        </div>
-        <div class = "container-li">
             <h3>タイトル<span class = "must-container">必須</span></h3>
           <%= form.text_field :title, placeholder: "タイトル", size: "50" %>
         </div>
