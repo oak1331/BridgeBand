@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 70px;
+  height: 60px;
   border: 1px solid #555;
   background-color: #A39391;
 }
@@ -27,8 +27,8 @@
 } 
 
 .search-input {
-  width: 550px;
-  height: 38px;
+  width: 530px;
+  height: 32px;
   border: 1px solid #ddd;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -39,8 +39,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 38px;
+  width: 70px;
+  height: 32px;
   border: 1px solid #ddd;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;

@@ -1,0 +1,133 @@
+.devise-view {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 60px);
+}
+
+.devise-login {
+  width: 350px;
+  height: 410px;
+  border: 1px #ddd solid;
+  border-radius: 4px;
+}
+
+.devise-signin {
+  width: 350px;
+  height: 530px;
+  border: 1px #ddd solid;
+  border-radius: 4px;
+}
+
+.inner-box {
+  padding: 20px 26px;
+}
+
+h1 {
+  line-height: 1.2;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  color: #111;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.email-box {
+  margin-bottom: 13px;
+}
+
+.password-box {
+  margin-bottom: 22px;
+}
+
+.email-box label, .password-box label {
+  padding-left: 2px;
+  padding-bottom: 2px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.email-box input[type="email"], .password-box input[type="password"] {
+  width: 100%;
+  height: 31px;
+  padding: 0 7px;
+  /* border-style: none; */
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0,0,0,.07) inset;
+}
+
+.column-left {
+  float: left;
+}
+
+.column-right {
+  float: right;
+}
+
+.forget-password {
+  text-decoration: none;
+}
+
+.password-box a {
+  font-size: 13px;
+}
+
+.login-box {
+  margin-bottom: 36px;
+}
+
+.login-box input[type="submit"] {
+  width: 100%;
+  height: 31px;
+  /* border-style: none; */
+  border: 1px #c77546 solid;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, #ffb990, #fa9a62);
+}
+
+.login-box input[type="submit"]:hover {
+  background: #ffa571;
+  cursor: pointer;
+}
+
+.remember {
+  margin-top: 20px;
+  padding-left: 3px;
+  font-size: 13px;
+}
+
+.newuser-box p {
+  margin-bottom: 14px;
+  color: #767676;
+  font-size: 12px;
+  text-align: center;
+}
+
+.newuser-box p span {
+  text-decoration: line-through;
+  text-decoration-color: #e7e7e7;
+}
+
+.newuser-box a {
+  display: block;
+  width: 100%;
+  height: 31px;
+  line-height: 31px;
+  border: 1px #a2a6ac solid;
+  border-radius: 3px;
+  background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+  color: #111;
+  font-size: 13px;
+  text-align: center;
+}
+
+.newuser-box a:hover {
+  background: #e7e9ec;
+}
+
+.account {
+  text-decoration: none;
+}
