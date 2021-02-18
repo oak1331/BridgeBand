@@ -12,3 +12,11 @@
     <%= @tweet.text %>
   </div>
 </div>
+
+<% if user_signed_in? && current_user.id == @tweet.user_id %>
+  <ul>
+    <li>
+      <%= link_to "編集", "/tweets/#{current_user.id}/edit" %>
+    </li>
+  </ul>
+<% end %>
