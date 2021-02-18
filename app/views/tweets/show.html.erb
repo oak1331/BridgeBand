@@ -1,1 +1,14 @@
-<h3>show_test</h3>
+<div class >
+  <div>
+    <%= image_tag @tweet.image.variant(resize: '530x300') %>
+  </div>
+    <div>
+    <%= @tweet.user.name %>
+  </div>
+  <div>
+    <%= @tweet.title %>
+  </div>
+    <div>
+    <%= @tweet.text %>
+  </div>
+</div>
