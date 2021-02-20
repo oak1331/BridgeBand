@@ -1,4 +1,4 @@
-<div class >
+<div>
   <div>
     <%= image_tag @tweet.image.variant(resize: '530x300') %>
   </div>
@@ -16,7 +16,7 @@
 <% if user_signed_in? && current_user.id == @tweet.user_id %>
   <ul>
     <li>
-      <%= link_to "編集", "/tweets/#{current_user.id}/edit" %>
+      <%= link_to "編集", "/tweets/#{@tweet.id}/edit" %>
     </li>
   </ul>
 <% end %>
