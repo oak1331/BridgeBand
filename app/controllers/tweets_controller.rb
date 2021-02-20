@@ -25,6 +25,11 @@ class TweetsController < ApplicationController
   def show
   end
 
+  def destroy
+    tweet = Tweet.find(params[:id])
+    tweet.destroy
+  end
+
   private
   def tweet_params
     params.require(:tweet).permit(:title, :text, :image).merge(user_id: current_user.id)
