@@ -1,1 +1,24 @@
-<h3>test</h3>
+<div class="contents">
+  <div class="container">
+    <h2>投稿フォーム</h2>
+    <div class = "container-box">
+      <%= form_with(model: @tweet, local: true) do |form| %>
+        <div class = "container-li">
+            <h3>タイトル<span class = "must-container">必須</span></h3>
+          <%= form.text_field :title, placeholder: "タイトル", size: "50" %>
+        </div>
+        <div class = "container-comment">
+          <h3>コメントを入力してください</h3>
+          <%= form.text_area :text, placeholder: "コメント", size: "50x10" %>
+        </div>
+        <div class = "container-li">
+          <h3>画像を選択してください<span class = "must-container">必須</span></h3>
+          <%= form.file_field :image %>
+        </div>
+        <div class = "container-post">
+          <%= form.submit " 投稿 " %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
