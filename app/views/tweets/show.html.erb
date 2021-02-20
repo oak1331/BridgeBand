@@ -18,5 +18,8 @@
     <li>
       <%= link_to "編集", "/tweets/#{@tweet.id}/edit" %>
     </li>
+        <li>
+      <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
+    </li>
   </ul>
 <% end %>
