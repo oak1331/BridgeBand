@@ -12,4 +12,7 @@
   <p><%= @user.name %>さんの投稿一覧</p><br/>
   <%= render partial: "tweets/tweet", collection: @tweets %>
 </div>
-<%= link_to "アカウントを編集する", edit_user_path(current_user.id) %>
+
+<% if user_signed_in? && current_user.id == @user.id %>
+  <%= link_to "アカウントを編集する", edit_user_path(current_user.id) %>
+<% end %>
