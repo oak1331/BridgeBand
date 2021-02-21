@@ -1,7 +1,6 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :move_to_index, only: :edit
-  before_action :set_tweet, only: [:edit, :show]
 
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
@@ -21,6 +20,7 @@ class TweetsController < ApplicationController
   end
 
   def edit
+    tweet = Tweet.find(params[:id])
   end
 
   def update
@@ -33,6 +33,9 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @tweet = Tweet.find(params[:id])
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
   end
 
   def destroy
