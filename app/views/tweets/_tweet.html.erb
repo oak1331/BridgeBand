@@ -1,0 +1,11 @@
+<div class = "tweet-box">
+  <div class = "tweet-image">
+    <%= link_to image_tag( tweet.image.variant(resize: '320x180') ), tweet_path(tweet.id) %>
+  </div>
+  <div class = "tweet-name">
+    <%= tweet.user.name %>
+  </div>
+  <div class = "tweet-title">
+    <%= tweet.title %>
+  </div>
+</div>
