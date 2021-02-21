@@ -29,7 +29,7 @@
         </div>
         <div class = "user">
           <% if user_signed_in? %>
-            <%= link_to "マイページ", "/users/#{current_user.id}" %>
+            <%= link_to "マイページ", user_path(current_user.id) %>
           <% else %>
             <%= link_to "ログイン", new_user_session_path, class: "" %>
           <% end %>

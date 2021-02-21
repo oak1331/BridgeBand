@@ -1,19 +1,18 @@
 <div class = "tweet-view">
-  <p><%= @name %>さんの投稿一覧</p>
-  <% @tweets.each do |tweet| %>
-    <div class = "tweet-box">
-      <div class = "tweet-image">
-        <a href= '/tweets/:id'><%= image_tag tweet.image.variant(resize: '320x180') %></a>
-      </div>
-      <div class = "tweet-name">
-        <%= @name %>
-      </div>
-      <div class = "tweet-title">
-        <%= tweet.title %>
-      </div>
-    </div>
-  <% end %>
+  <p><%= @user.name %>さんのプロフィール</p>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th class="table__col1">名前</th>
+        <td class="table__col2"><%= @user.name %></td>
+      </tr>
+    </tr>
+    </tbody>
+  </table>
+  <p><%= @user.name %>さんの投稿一覧</p><br/>
+  <%= render partial: "tweets/tweet", collection: @tweets %>
 </div>
 
-
-<%= link_to "アカウントを編集する", "/users/#{current_user.id}/edit" %>
+<% if user_signed_in? && current_user.id == @user.id %>
+  <%= link_to "アカウントを編集する", edit_user_path(current_user.id) %>
+<% end %>
