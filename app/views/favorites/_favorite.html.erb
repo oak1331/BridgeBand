@@ -1,0 +1,7 @@
+<% if current_user.favorited_by?(tweet.id) %>
+  <%= link_to "取消し", tweet_favorite_path(tweet_id: tweet.id, id: tweet.favorites[0].id), method: :delete, remote: true, class: "favorite-btn" %>
+  <%= tweet.favorites.count %>
+<% else %>
+<%= link_to "いいね", tweet_favorites_path(tweet.id), method: :post, remote: true, class:"favorite-btn" %>
+  <%= tweet.favorites.count %>
+<% end %>

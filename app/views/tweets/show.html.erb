@@ -47,3 +47,7 @@
       </li>
   </ul>
 </div>
+
+<div class = "star-btn" id = "favorite_<%= @tweet.id %>">
+  <%= render partial: "favorites/favorite", locals: { tweet: @tweet } %>
+</div>

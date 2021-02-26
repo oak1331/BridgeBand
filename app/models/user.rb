@@ -8,4 +8,8 @@ class User < ApplicationRecord
   has_many :favorites
   
   validates :name, presence: true
+
+  def favorited_by?(tweet_id)
+    favorites.where(tweet_id: tweet_id).exists?
+  end
 end
