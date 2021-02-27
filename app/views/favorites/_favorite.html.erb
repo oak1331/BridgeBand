@@ -1,0 +1,14 @@
+<% if !user_signed_in? %>
+  <i class="fa fa-heart favorite-btn"></i>
+  <%= tweet.favorites.length %>
+<% elsif current_user.favorited_by?(tweet.id) %>
+  <%= link_to tweet_favorite_path(tweet_id: tweet.id, id: tweet.favorites[0].id), method: :delete, remote: true do %>
+    <i class="fa fa-heart unfavorite-btn"></i>
+  <% end %>
+  <%= tweet.favorites.length %>
+<% else %>
+  <%= link_to tweet_favorites_path(tweet.id), method: :post, remote: true do %>
+    <i class="fa fa-heart favorite-btn"></i>
+  <% end %>
+  <%= tweet.favorites.length %>
+<% end %>

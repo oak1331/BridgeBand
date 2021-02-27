@@ -3,7 +3,7 @@
     <%= image_tag @tweet.image.variant(resize: '530x300') %>
   </div>
     <div>
-    <%= @tweet.user.name %>
+    <%= link_to @tweet.user.name, user_path(@tweet.user.id) %>
   </div>
   <div>
     <%= @tweet.title %>
@@ -46,4 +46,8 @@
         <% end %>
       </li>
   </ul>
+</div>
+
+<div class = "star-btn" id = "favorite_<%= @tweet.id %>">
+  <%= render partial: "favorites/favorite", locals: { tweet: @tweet } %>
 </div>

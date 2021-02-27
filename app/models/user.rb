@@ -5,6 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :tweets
   has_many :comments
+  has_many :favorites
   
   validates :name, presence: true
+
+  def favorited_by?(tweet_id)
+    favorites.where(tweet_id: tweet_id).exists?
+  end
 end
