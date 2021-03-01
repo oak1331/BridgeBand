@@ -81,13 +81,63 @@
 /* トップページ.SCSS */
 
 
+/* 投稿詳細ページ.SCSS */
+
+.show-contents {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30em;
+  margin: 2em auto;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.show-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  margin: 0.5em 0 2em 0;
+  border-bottom: 1px solid #888;
+}
+
+.tweet-show-name {
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+  &:hover {
+    color: #888;
+  }
+}
+
+.tweet-show-title {
+  color: #111;
+  font-size: 18px;
+}
+
+.tweet-edit {
+  color: #333;
+  text-decoration: none;
+}
+
+.tweet-delete {
+  color: #333;
+  text-decoration: none;
+}
+
+/* 投稿詳細ページ.SCSS */
+
+
 /* 新規投稿ページ.SCSS */
 
 .contents {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 55px);
 }
 
 .container {
