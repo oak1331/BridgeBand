@@ -7,44 +7,128 @@
 
 .tweet-view {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  margin-top: 3%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 0.8em;
+  padding: 1.2em 0.8em;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+
+  @media (min-width: 1025px) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 .tweet-box {
-  width: 340px;
-  height: 280px;
-  margin:0 3% 50px 3%;
-  padding-top: 10px;
-  border: 1px solid #555;
+  margin-bottom: 2em;
+  padding: 0.5em 1em;
   border-radius: 5px;
-  background-color: #A39391;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+
+  @media (min-width: 600px) {
+    max-width: 30vw;
+  }
+  
+  @media (min-width: 1025px) {
+    max-width: 33vw;
+  }
 }
 
 .tweet-image {
   display: flex;
   justify-content: center;
-}
+  img {
+    width: 32vw;
+    height: auto;
+    border: 1px solid #444;
+  }
 
-.tweet-image img {
-  border: 1px solid #444;
+  @media (min-width: 600px) {
+    img {
+      width: 20vw;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    img {
+      max-width: 270px;
+    }
+  }
 }
 
 .tweet-name {
-  padding: 0 10px;
+  padding: 0 0.5em;
   color: #333;
-  font-size: 16px;
+  font-size: min(15px, 1.1vw);
+  text-decoration: none;
+  &:hover {
+    color: #888;
+  }
 }
 
 .tweet-title {
   display: flex;
   justify-content: center;
   padding: 0 10px;
-  color: #000;
-  font-size: 18px;
+  color: #111;
+  font-size: min(17px, 1.3vw);
+  text-decoration: none;
 }
 
 /* トップページ.SCSS */
+
+
+/* 投稿詳細ページ.SCSS */
+
+.show-contents {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30em;
+  margin: 2em auto;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.show-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  margin: 0.5em 0 2em 0;
+  border-bottom: 1px solid #888;
+}
+
+.tweet-show-name {
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+  &:hover {
+    color: #888;
+  }
+}
+
+.tweet-show-title {
+  color: #111;
+  font-size: 18px;
+}
+
+.tweet-edit {
+  color: #333;
+  text-decoration: none;
+}
+
+.tweet-delete {
+  color: #333;
+  text-decoration: none;
+}
+
+/* 投稿詳細ページ.SCSS */
 
 
 /* 新規投稿ページ.SCSS */
@@ -53,7 +137,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 55px);
 }
 
 .container {

@@ -4,8 +4,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to tweet_path(@comment.tweet)
     else
-      @prototype = @comment.tweet
-      @comments = @prototype.comments
+      @tweet = @comment.tweet
+      @comments = @tweet.comments
       render "tweets/show"
     end
   end

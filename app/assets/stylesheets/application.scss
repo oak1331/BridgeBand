@@ -9,6 +9,7 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import './devise';
 @import './tweets';
 @import './favorites';
+@import './comments';
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -28,4 +29,8 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 
  * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }

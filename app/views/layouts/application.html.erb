@@ -5,28 +5,45 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   </head>
 
   <body>
+    <%= javascript_pack_tag 'nav' %>
     <div class = "header">
-      <h1 class="header-logo"><a href='/'>Bridge Band</a></h1>
+      <div class = "header-left">
+        <nav id="nav">
+          <ul>
+            <% if user_signed_in? %>
+              <%= link_to "新規投稿", new_tweet_path, class: "nav-li" %>
+              <%= link_to "マイページ", user_path(current_user.id), class: "nav-li" %>
+              <%= link_to "アカウントの編集", edit_user_path(current_user.id), class: "nav-li" %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-li" %>
+            <% else %>
+              <%= link_to "新規登録", new_user_registration_path, class: "nav-li" %>
+              <%= link_to "ログイン", new_user_session_path, class: "nav-li" %>
+            <% end %>
+          </ul>
+        </nav>
+        <div id="hamburger">
+          <span class="inner_line" id="line1"></span>
+          <span class="inner_line" id="line2"></span>
+          <span class="inner_line" id="line3"></span>
+        </div>
+        <h1 class="header-logo"><%= link_to "BridgeBand", root_path %></h1>
+      </div>
+      <div class = "search">
         <%= form_with url: search_tweets_path, local: true, method: :get, class: "search-form" do |form| %>
           <%= form.text_field :keyword, class: "search-input" %>
-          <%= form.submit "検索", class: "search-btn" %>
-        <% end %>
-      <div class = "header-right">
-        <div class = "nav">
-          <% if user_signed_in? %>
-            <%= link_to "新規投稿", new_tweet_path, class: "nav-list" %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-list" %>
-          <% else %>
-            <%= link_to "新規登録", new_user_registration_path, class: "nav-list" %>
-            <%= link_to "ログイン", new_user_session_path, class: "nav-list" %>
+          <%= button_tag type: 'submit', class: "search-btn" do %>
+            <i class="fas fa-search"></i>
           <% end %>
-        </div>
+        <% end %>
+      </div>
+      <div class = "header-right">
         <div class = "user">
           <% if user_signed_in? %>
             <%= link_to "マイページ", user_path(current_user.id) %>
