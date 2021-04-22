@@ -13,6 +13,10 @@
   <%= render partial: "tweets/tweet", collection: @tweets %>
 </div>
 
+<div id = "relationship_<%= @user.id %>">
+  <%= render partial: "relationships/relationship", locals: { user: @user } %>
+</div>
+
 <% if user_signed_in? && current_user.id == @user.id %>
   <%= link_to "アカウントを編集する", edit_user_path(current_user.id) %>
 <% end %>
