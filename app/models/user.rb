@@ -17,14 +17,12 @@ class User < ApplicationRecord
     favorites.where(tweet_id: tweet_id).exists?
   end
 
-  def follow(other_user)
-    return if self == other_user
-
-    relationships.find_or_create_by!(follower: other_user)
-  end
-
   def following?(user)
     followings.include?(user)
+  end
+
+  def follow(user_id)
+    relationships.create(follower: user_id)
   end
 
   def unfollow(relathinoship_id)
