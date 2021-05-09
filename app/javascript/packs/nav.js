@@ -1,4 +1,4 @@
-document.addEventListener('turbolinks:load', function () {
+document.addEventListener('DOMContentLoaded', function(){
 
 function hamburger() {
   document.getElementById('line1').classList.toggle('line_1');
