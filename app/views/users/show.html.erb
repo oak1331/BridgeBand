@@ -21,9 +21,4 @@
   <%= link_to "アカウントを編集する", edit_user_path(current_user.id) %>
 <% end %>
 
-<p><%= @user.name %>さんのお気に入り一覧</p><br/>
-<div class = "tweet-view">
-  <%= render partial: "tweets/tweet", collection: @favorite_tweet %>
-</div>
-
 <%= render partial: "rooms/room", locals: { user: @user, room: @room, entry: @entry, isRoom: @isRoom, roomId: @roomId } %>

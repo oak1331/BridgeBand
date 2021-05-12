@@ -1,0 +1,4 @@
+<p><%= @user.name %>さんのお気に入り一覧</p><br/>
+<div class = "tweet-view">
+  <%= render partial: "tweets/tweet", collection: @favorite_tweet %>
+</div>

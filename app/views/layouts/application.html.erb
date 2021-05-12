@@ -20,6 +20,7 @@
             <% if user_signed_in? %>
               <%= link_to "新規投稿", new_tweet_path, class: "nav-li" %>
               <%= link_to "マイページ", user_path(current_user.id), class: "nav-li" %>
+              <%= link_to "お気に入り一覧", favorites_user_path(current_user.id), class: "nav-li" %>
               <%= link_to "フォロー", user_followings_path(current_user.id), class: "nav-li" %>
               <%= link_to "フォロワー", user_followers_path(current_user.id), class: "nav-li" %>
               <%= link_to "アカウントの編集", edit_user_path(current_user.id), class: "nav-li" %>
